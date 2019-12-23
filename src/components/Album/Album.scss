@@ -1,0 +1,65 @@
+$firstColor: #393939;
+$firstSize: 0.14rem;
+$secondColor: #919191;
+$secondSize: 0.1rem;
+
+.album {
+    li {
+        display: flex;
+        align-items: center;
+        height: 0.5rem;
+        padding: 0.05rem 0.16rem;
+
+        .img {
+            position: relative;
+            width: 0.485rem;
+            height: 100%;
+            border-radius: 0.05rem;
+            background: url("../../assets/img/bfg.png") center center / 100% no-repeat;
+
+            img {
+                // display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 0.05rem;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(100% - 0.4rem);
+            padding-left: 0.1rem;
+
+            p:first-child {
+                color: $firstColor;
+                font-size: $firstSize;
+                width: 100%;
+                line-height: 1.2;
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                /* 对象作为伸缩盒子模型显示 */
+                -webkit-box-orient: vertical;
+                /* 设置或检索伸缩盒对象的子元素的排列方式 */
+                -webkit-line-clamp: 2;
+                /* 显示的行数 */
+                overflow: hidden;
+                /* 隐藏超出的内容 */
+            }
+
+            p:last-child {
+                color: $secondColor;
+                font-size: $secondSize;
+
+                span {
+                    padding-right: 0.1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,506 @@
+$firstColor: #393939;
+$firstSize: 0.14rem;
+$secondColor: #919191;
+$secondSize: 0.1rem;
+
+// hotList
+.hotList {
+  h4 {
+    font-size: 0.15rem;
+    font-weight: 500;
+    padding: 0 0.16rem 0.1rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0 0.16rem;
+    height: 0.4rem;
+    margin-top: 0.1rem;
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        padding-left: 0.1rem;
+
+        p:first-child {
+          color: $firstColor;
+          font-size: $firstSize;
+        }
+
+        p:last-child {
+          color: $secondColor;
+          font-size: $secondSize;
+        }
+      }
+
+      label {
+        line-height: 0.4rem;
+        color: $secondColor;
+        font-size: $secondSize;
+      }
+    }
+  }
+
+  .color-F04849 {
+    color: #f04849;
+  }
+
+  .color-ACACAC {
+    color: #acacac;
+  }
+}
+
+// single
+.single {
+  padding: 0;
+  background-color: transparent;
+
+  .ply-all {
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    justify-content: left;
+    padding: 0 0.4rem;
+    // margin-top: -0.1rem;
+    // border-radius: 15px 15px 0 0;
+    background-color: #fafafa;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 0.5rem;
+    padding: 0 0.16rem;
+
+    .lfet {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 1.1rem);
+
+      .num {
+        width: 0.24rem;
+        height: 0.24rem;
+        line-height: 0.24rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 0.1rem;
+        width: 100%;
+      }
+
+      div p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      p:first-child {
+        color: $firstColor;
+        font-size: $firstSize;
+      }
+
+      p:last-child {
+        color: $secondColor;
+        font-size: $secondSize;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 0.8rem;
+    }
+  }
+
+  .item:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  .item:nth-child(odd) {
+    background-color: #efefef;
+  }
+
+  .liSty {
+    background-color: #f48476 !important;
+  }
+
+  .liSty * {
+    color: #ffffff !important;
+  }
+
+  .numSty {
+    position: relative;
+    color: transparent !important;
+  }
+}
+
+//   userInfo
+.userInfo {
+  ul {
+    padding: 0 0.16rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 0.5rem;
+      padding: 0.05rem 0;
+
+      div {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 0.4rem);
+
+        img {
+          width: 0.4rem;
+          height: 0.4rem;
+          border-radius: 50%;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 0.1rem;
+          width: calc(100% - 0.4rem);
+
+          p {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+          p:first-child {
+            color: $firstColor;
+            font-size: $firstSize;
+          }
+
+          p:last-child {
+            color: $secondColor;
+            font-size: $secondSize;
+          }
+        }
+      }
+
+      span {
+        color: $secondColor;
+      }
+    }
+  }
+}
+
+//   singer
+.singer {
+  ul {
+    padding: 0 0.16rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 0.5rem;
+      padding: 0.05rem 0;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 0.4rem;
+          height: 0.4rem;
+          border-radius: 50%;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          padding-left: 0.1rem;
+
+          p:first-child {
+            color: $firstColor;
+            font-size: $firstSize;
+          }
+
+          p:last-child {
+            color: $secondColor;
+            font-size: $secondSize;
+            padding-left: 0.05rem;
+          }
+        }
+      }
+
+      span {
+        color: $secondColor;
+      }
+    }
+  }
+}
+
+//songList
+.songList {
+  .me-list {
+    li {
+      height: 0.5rem;
+      padding: 0.05rem 0 0.05rem 0.16rem;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 5px;
+      }
+
+      .list-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: calc(100% - 0.8rem);
+        height: 100%;
+        padding: 0 0 0 0.16rem;
+
+        p {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          line-height: 1;
+        }
+
+        p:first-child {
+          color: $firstColor;
+          font-size: $firstSize;
+        }
+
+        p:last-child {
+          color: $secondColor;
+          font-size: $secondSize;
+
+          span {
+            margin-left: 0.05rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//video
+.sVideo {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      height: 0.7rem;
+      padding: 0.05rem 0.16rem;
+
+      .img {
+        position: relative;
+        width: 1.1rem;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0.05rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.05rem;
+        }
+
+        .playcount-bg {
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 0 0.05rem 0 0;
+          background: url("../../../assets/img/bql.9.png") center center / 100% 100% no-repeat;
+
+          p {
+            font-size: 0.1rem;
+            color: #ffffff;
+            padding: 0 0.02rem 0 0.2rem;
+          }
+
+          p::before {
+            width: 0.14rem;
+            height: 0.14rem;
+            background-color: red;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0.02rem;
+            background: url("../../../assets/img/aky.png") center center / 0.14rem 0.14rem no-repeat;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100% - 1.1rem);
+        padding-left: 0.1rem;
+
+        p:first-child {
+          color: $firstColor;
+          font-size: $firstSize;
+          width: 100%;
+          line-height: 1.2;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          /* 对象作为伸缩盒子模型显示 */
+          -webkit-box-orient: vertical;
+          /* 设置或检索伸缩盒对象的子元素的排列方式 */
+          -webkit-line-clamp: 2;
+          /* 显示的行数 */
+          overflow: hidden;
+          /* 隐藏超出的内容 */
+        }
+
+        p:last-child {
+          color: $secondColor;
+          font-size: $secondSize;
+
+          span {
+            padding-right: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// album
+.sAlbum {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      height: 0.5rem;
+      padding: 0.05rem 0.16rem;
+
+      .img {
+        position: relative;
+        width: 0.485rem;
+        height: 100%;
+        border-radius: 0.05rem;
+        background: url("../../../assets/img/bfg.png") center center / 100% no-repeat;
+
+        img {
+          // display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.4rem;
+          height: 0.4rem;
+          border-radius: 0.05rem;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100% - 0.4rem);
+        padding-left: 0.1rem;
+
+        p:first-child {
+          color: $firstColor;
+          font-size: $firstSize;
+          width: 100%;
+          line-height: 1.2;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          /* 对象作为伸缩盒子模型显示 */
+          -webkit-box-orient: vertical;
+          /* 设置或检索伸缩盒对象的子元素的排列方式 */
+          -webkit-line-clamp: 2;
+          /* 显示的行数 */
+          overflow: hidden;
+          /* 隐藏超出的内容 */
+        }
+
+        p:last-child {
+          color: $secondColor;
+          font-size: $secondSize;
+
+          span {
+            padding-right: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//broadcasting
+.broadcasting {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      height: 0.5rem;
+      padding: 0.05rem 0.16rem;
+
+      .img {
+        position: relative;
+        width: 0.4rem;
+        height: 100%;
+        border-radius: 0.05rem;
+        // background: url("../../../assets/img/bfg.png") center center / 100% no-repeat;
+        img {
+          // display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.4rem;
+          height: 0.4rem;
+          border-radius: 0.05rem;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: calc(100% - 0.4rem);
+        height: 100%;
+        padding-left: 0.1rem;
+
+        p:first-child {
+          color: $firstColor;
+          font-size: $firstSize;
+          width: 100%;
+          line-height: 1.2;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        p:last-child {
+          color: $secondColor;
+          font-size: $secondSize;
+        }
+      }
+    }
+  }
+}

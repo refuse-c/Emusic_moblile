@@ -1,0 +1,178 @@
+.find {
+    width: 100%;
+
+    .swiper-container {
+        height: 40vw;
+        margin: 0.1rem;
+        border-radius: 0.05rem;
+        overflow: hidden;
+
+        .swiper-slide {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            span {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 0 0 0.05rem 0;
+                padding: 0.01rem 0.1rem;
+                color: #ffffff;
+                border-radius: 0.01rem;
+                font-size: 0.12rem;
+            }
+        }
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        color: #070707;
+        padding: 0 0 0 0.16rem;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 0.15rem;
+                font-weight: 600;
+            }
+
+            span {
+                font-size: 0.14rem;
+                color: #999999;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                width: 0.4rem;
+                height: 0.4rem;
+                text-align: center;
+                line-height: 0.46rem;
+                color: #FF1D11;
+                border-radius: 50%;
+                // background-color: #FF1D11;  
+            }
+
+            span {
+                font-size: 0.11rem;
+                line-height: 0.3rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .recommend-list {
+        &:after {
+            content: "";
+            width: 28vw;
+            display: block;
+            height: 0;
+            width: 28vw;
+            /*只需要添加父元素的after伪元素中 高度0 ，宽度与item的宽一样*/
+        }
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 0.16rem 0;
+
+        li {
+            position: relative;
+            width: 28vw;
+            font-size: 0.1rem;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 28vw;
+                height: 28vw;
+                border-radius: 0.05rem;
+                background: url('../../assets/img/upsdk_cancel_pressed_bg.png') center center / 28vw no-repeat;
+            }
+
+            a {
+                color: rgb(85, 85, 85);
+            }
+
+            img {
+                width: 28vw;
+                height: 28vw;
+                border-radius: 0.05rem;
+            }
+
+            .title {
+                width: 100%;
+                margin: 0.1rem 0 0;
+                height: 0.4rem;
+
+                p {
+                    width: 100%;
+                    line-height: 1.2;
+                    color: #393939;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    /* 对象作为伸缩盒子模型显示 */
+                    -webkit-box-orient: vertical;
+                    /* 设置或检索伸缩盒对象的子元素的排列方式 */
+                    -webkit-line-clamp: 2;
+                    /* 显示的行数 */
+                    overflow: hidden;
+                    /* 隐藏超出的内容 */
+                }
+            }
+
+            .playcount-bg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: 0 0.05rem 0 0;
+                background: url('../../assets/img/bql.9.png') center center / 100% 100% no-repeat;
+
+                p {
+                    font-size: 0.1rem;
+                    color: #ffffff;
+                    padding: 0 0.02rem 0 0.2rem;
+                }
+
+                p::before {
+                    width: 0.14rem;
+                    height: 0.14rem;
+                    background-color: red;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0.02rem;
+                    background: url("../../assets/img/aky.png") center center / 0.14rem 0.14rem no-repeat;
+                }
+            }
+        }
+    }
+}

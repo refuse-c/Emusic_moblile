@@ -1,0 +1,96 @@
+.me {
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        color: #070707;
+        padding: 0 0 0 0.16rem;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 0.15rem;
+                font-weight: 600;
+            }
+
+            span {
+                font-size: 0.14rem;
+                color: #999999;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .me-menu {
+        padding: 0 0.16rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 0.4rem;
+            
+
+            p {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 0.4rem);
+                height: 100%;
+                margin: 0 0 0 0.16rem;
+                border-bottom: 1px solid #F2F2F2;
+            }
+        }
+    }
+
+    .me-list {
+
+        li {
+            height: 0.5rem;
+            padding: 0.05rem 0 0.05rem 0.16rem;
+            display: flex;
+            align-items: center;
+
+
+
+            img {
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 5px;
+            }
+
+            .list-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: calc(100% - 0.8rem);
+                height: 100%;
+                padding: 0 0 0 0.16rem;
+
+                p {
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: 1;
+                }
+
+                p:first-child {
+                    font-size: 0.14rem;
+                    color: #333333;
+                }
+
+                p:last-child {
+                    font-size: 0.12rem;
+                    color: #666666;
+                }
+            }
+        }
+    }
+}

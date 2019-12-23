@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.4rem;
+  height: 0.4rem;
+}
+
+.login {
+  background: url("../img/jpg/bjg.jpg") center center / 100% 100% no-repeat;
+}
+
+.numSty::before {
+  content: "";
+  position: absolute;
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../img/bcw.png") center center / 100% no-repeat;
+}
+
+.ply-all {
+  background: url("../img/note_btn_play_white.png") 0.1rem center / 0.2rem 0.2rem no-repeat;
+}
+
+.play {
+  background: url("../img/note_btn_play_white.png") center center / 62% no-repeat;
+}
+
+.pause {
+  background: url("../img/note_btn_pause_white.png") center center / 62% no-repeat;
+}
+
+.back {
+  background: url("../img/ab1.png") center center / 50% no-repeat;
+}
+
+.share {
+  background: url("../img/b6w.png") center center / 45% no-repeat;
+}
+
+.filter {
+  background: url("../img/cg.png") center center / cover no-repeat;
+}
+
+.add {
+  background: url("../img/aah.png") center center / 45% no-repeat;
+}
+
+.more {
+  background: url("../img/b5c.png") center center / 49% no-repeat;
+}
+
+.circle {
+  display: none;
+}
+
+.icon-play {
+  width: 0.45rem;
+  height: 0.45rem;
+  background: url("../img/note_btn_play.png") center center / 90% no-repeat;
+}
+
+.icon-pause {
+  width: 0.45rem;
+  height: 0.45rem;
+  background: url("../img/note_btn_pause.png") center center / 90% no-repeat;
+}
+
+.icon-pre {
+  background: url("../img/note_btn_pre.png") center center / 50% no-repeat;
+}
+
+.icon-next {
+  background: url("../img/note_btn_next.png") center center / 50% no-repeat;
+}
+
+.icon-order {
+  background: url("../img/bi3.png") center center / 90% no-repeat;
+}
+
+.icon-random {
+  background: url("../img/bie.png") center center / 90% no-repeat;
+}
+
+.icon-only {
+  background: url("../img/bi1.png") center center / 90% no-repeat;
+}
+
+.icon-list {
+  background: url("../img/biu.png") center center / 90% no-repeat;
+}
+
+.icon-list-f {
+  background: url("../img/biuu.png") center center / 100% no-repeat;
+}
+
+.icon-more {
+  background: url("../img/an1.png") center center / 50% no-repeat;
+}
+
+.icon-more-sty {
+  background: url("../img/an11.png") center center / 52% 50% no-repeat;
+}
+
+.icon-mv {
+  background: url("../img/aa5.png") center center / 60% no-repeat;
+}
+
+.icon-mv-sty {
+  background: url("../img/aa51.png") center center / 60% no-repeat;
+}
+
+.icon-setting {
+  background: url("../img/azz.png") center center / 90% no-repeat;
+}
+
+.icon-search {
+  background: url("../img/arg.png") center center / 50% no-repeat;
+}
+
+.icon-p1 {
+  background: #FF1D11 url("../img/t_dragonball_icn_daily.png") center center / 110% no-repeat;
+}
+
+.icon-p2 {
+  background: #FF1D11 url("../img/t_dragonball_icn_playlist.png") center center / 110% no-repeat;
+}
+
+.icon-p3 {
+  background: #FF1D11 url("../img/t_dragonball_icn_rank.png") center center / 110% no-repeat;
+}
+
+.icon-p4 {
+  background: #FF1D11 url("../img/t_dragonball_icn_radio.png") center center / 110% no-repeat;
+}
+
+.icon-p5 {
+  background: #FF1D11 url("../img/t_dragonball_icn_daily.png") center center / 110% no-repeat;
+}
+
+
+// me
+
+.icon-locality {
+  background: url("../img/t_actionbar_music_selected.png") center center / 120% no-repeat;
+}
+
+.iocn-recently {
+  background: url("../img/ar3.png") center center / 100% no-repeat;
+}
+
+.icon-download {
+  background: url("../img/b6w1.png") center center / 60% no-repeat;
+}
+
+.icon-station {
+  background: url("../img/t_dragonball_icn_radio.png") center center / 100% no-repeat;
+}
+
+.icon-collect {
+  background: url("../img/ar3.png") center center / 100% no-repeat;
+}
+//search
+.icon-search-back {
+  background: url("../img/b1y.png") center center / 0.2rem no-repeat;
+}
+
+.icon-search-singer {
+  background: url("../img/bmd.png") center center / 0.15rem no-repeat;
+}

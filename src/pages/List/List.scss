@@ -1,0 +1,190 @@
+$size:0.12rem;
+
+.list-content {
+
+    // width: 100%;
+    // height: 80vh;
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 0.4rem;
+        background-color: rgba(22, 31, 38, 0.1);
+
+        .title {
+            width: calc(100% - 1rem);
+            line-height: 0.4rem;
+            overflow: hidden;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #ffffff;
+            font-size: 0.16rem;
+        }
+    }
+
+    .list-info {
+        display: flex;
+        position: sticky;
+        top: calc(-20vh + 10px);
+        z-index: 8;
+        width: 100%;
+        height: calc(20vh + 0.4rem);
+        padding: 0.56rem 0.16rem 0.26rem;
+        overflow: hidden;
+        color: #ffffff;
+        background-color: rgba(22, 31, 38, 1);
+
+        img {
+            width: 15vh;
+            height: 15vh;
+            border-radius: 5px;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(100% - 15vh);
+            height: 15vh;
+            padding-left: 0.16rem;
+
+            h2 {
+                line-height: 1.2;
+            }
+
+            .user-info {
+                display: flex;
+                align-items: center;
+                font-size: $size;
+                margin-top: 0.1rem;
+            }
+
+            img {
+                width: 4vh;
+                height: 4vh;
+                margin-right: 0.1rem;
+                border-radius: 50%;
+            }
+
+            .desc {
+                width: 100%;
+                line-height: 1.2;
+                font-size: $size;
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                /* 对象作为伸缩盒子模型显示 */
+                -webkit-box-orient: vertical;
+                /* 设置或检索伸缩盒对象的子元素的排列方式 */
+                -webkit-line-clamp: 2;
+                /* 显示的行数 */
+                overflow: hidden;
+                /* 隐藏超出的内容 */
+            }
+        }
+    }
+
+    .ply-all {
+        position: sticky;
+        top: 0.4rem;
+        z-index: 8;
+        width: 100%;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        justify-content: left;
+        padding: 0 0.4rem;
+        margin-top: -0.1rem;
+        border-radius: 15px 15px 0 0;
+        background-color: #fafafa;
+    }
+
+    .list {
+        position: sticky;
+        top: 0.4rem;
+        padding: 0;
+        padding-bottom: 0.5rem;
+        background-color: transparent;
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0.4rem;
+            width: 100%;
+            height: 0.5rem;
+            padding: 0 0.16rem;
+
+            .lfet {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 1.1rem);
+
+                .num {
+                    width: 0.24rem;
+                    height: 0.24rem;
+                    line-height: 0.24rem;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    margin-left: 0.1rem;
+                    width: 100%;
+                }
+
+                div p {
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                p:first-child {
+                    font-size: 0.14rem;
+                    color: #333333;
+                }
+
+                p:last-child {
+                    font-size: 0.12rem;
+                    color: #9F9F9F;
+                }
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 0.8rem;
+            }
+        }
+
+        .item:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .item:nth-child(odd) {
+            background-color: #efefef;
+        }
+
+        .liSty {
+            background-color: #0071fb !important;
+        }
+
+        .liSty * {
+            color: #ffffff !important;
+        }
+
+
+        .numSty {
+            position: relative;
+            color: transparent !important;
+        }
+    }
+}

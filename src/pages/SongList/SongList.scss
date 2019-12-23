@@ -1,0 +1,157 @@
+.song-list {
+  padding-top: 0.4rem;
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 0.4rem;
+    background-color: #ffffff;
+
+    .title {
+      width: calc(100% - 1rem);
+      line-height: 0.4rem;
+      overflow: hidden;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #222222;
+      font-size: 0.16rem;
+    }
+  }
+  .song-list-top {
+    display: flex;
+    align-items: center;
+    height: 0.4rem;
+    position: sticky;
+    top: 0.4rem;
+    z-index: 2;
+    background-color: #ffffff;
+    margin-bottom: 0.1rem;
+
+    select {
+      height: 0.4rem;
+      border: none;
+      outline: none;
+      padding: 0 0.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    ul {
+      width: 100%;
+      height: 0.4rem;
+      display: flex;
+      overflow-x: scroll;
+
+      li {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        margin: 0 0.16rem;
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    .actives {
+      border-bottom: 2px solid red;
+    }
+  }
+
+  .playlist {
+    &:after {
+      content: "";
+      width: 28vw;
+      display: block;
+      height: 0;
+      width: 28vw;
+      /*只需要添加父元素的after伪元素中 高度0 ，宽度与item的宽一样*/
+    }
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 0.16rem 0.4rem;
+
+    li {
+      position: relative;
+      width: 28vw;
+      font-size: 0.1rem;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 28vw;
+        height: 28vw;
+        border-radius: 0.05rem;
+        background: url("../../assets/img/upsdk_cancel_pressed_bg.png") center center / 28vw no-repeat;
+      }
+
+      a {
+        color: rgb(85, 85, 85);
+      }
+
+      img {
+        width: 28vw;
+        height: 28vw;
+        border-radius: 0.05rem;
+      }
+
+      .title {
+        width: 100%;
+        margin: 0.1rem 0 0;
+        height: 0.4rem;
+
+        p {
+          width: 100%;
+          line-height: 1.2;
+          color: #393939;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          /* 对象作为伸缩盒子模型显示 */
+          -webkit-box-orient: vertical;
+          /* 设置或检索伸缩盒对象的子元素的排列方式 */
+          -webkit-line-clamp: 2;
+          /* 显示的行数 */
+          overflow: hidden;
+          /* 隐藏超出的内容 */
+        }
+      }
+
+      .playcount-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 0.05rem 0 0;
+        background: url("../../assets/img/bql.9.png") center center / 100% 100% no-repeat;
+
+        p {
+          font-size: 0.1rem;
+          color: #ffffff;
+          padding: 0 0.02rem 0 0.2rem;
+        }
+
+        p::before {
+          width: 0.14rem;
+          height: 0.14rem;
+          background-color: red;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0.02rem;
+          background: url("../../assets/img/aky.png") center center / 0.14rem 0.14rem no-repeat;
+        }
+      }
+    }
+  }
+}

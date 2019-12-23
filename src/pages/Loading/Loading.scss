@@ -1,0 +1,49 @@
+.loading {
+    // display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    padding: 0.5rem;
+    color: #ffffff;
+    border-radius: 0.05rem;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    div {
+        display: flex;
+        align-items: flex-end;
+
+        span {
+            animation: mymove 0.8s linear infinite;
+            display: block;
+            width: 0.25rem;
+            height: 0.25rem;
+            background: url("../../assets/img/aqk.png") center center / 100% no-repeat;
+        }
+
+        p {
+            white-space: nowrap;
+            padding-left: 0.02rem;
+        }
+    }
+
+    @keyframes mymove {
+        0% {
+            background: url("../../assets/img/aqk.png") center center / 100% no-repeat;
+        }
+
+        33% {
+            background: url("../../assets/img/aqi.png") center center / 100% no-repeat;
+        }
+
+        66% {
+            background: url("../../assets/img/aqm.png") center center / 100% no-repeat;
+        }
+
+        100% {
+            background: url("../../assets/img/aqn.png") center center / 100% no-repeat;
+        }
+    }
+}
