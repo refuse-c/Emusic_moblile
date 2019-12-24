@@ -1,5 +1,6 @@
 .song-list {
   padding-top: 0.4rem;
+
   header {
     position: fixed;
     top: 0;
@@ -22,6 +23,7 @@
       font-size: 0.16rem;
     }
   }
+
   .song-list-top {
     display: flex;
     align-items: center;
@@ -74,7 +76,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 0.16rem 0.4rem;
+    padding: 0 0.16rem 0;
 
     li {
       position: relative;
@@ -153,5 +155,13 @@
         }
       }
     }
+  }
+
+  .loadMore {
+    width: 100%;
+    line-height: 0.4rem;
+    text-align: center;
+    color: #ccc;
+    padding-bottom: 0.5rem;
   }
 }

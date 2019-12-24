@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-25 13:21:38
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 09:35:44
+ * @LastEditors  : refuse_c
+ * @LastEditTime : 2019-12-24 15:28:05
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -23,7 +23,10 @@ class SongList extends Component {
             fomatData: [],
             playlistData: [],
             active: 0,
-            optionValue: 'all'
+            optionValue: 'all',
+            listId: '',
+            listTotal: 30,//歌单总数
+            moreTitle: true
         }
     }
     getPlaylistCatlist = () => {
@@ -37,13 +40,14 @@ class SongList extends Component {
             console.log(err)
         })
     }
-    getplaylistTop = (id) => {
+    getplaylistTop = (id, num) => {
         RAGet(playlistTop.api_url, {
             params: {
-                cat: id
+                cat: id,
+                limit: num
             }
         }).then(res => {
-            // console.log(res)
+            this.setState({ listTotal: res.total, listId: id })
             const data = res.playlists
             const list = []
             data.map((item, index) => {
@@ -120,7 +124,7 @@ class SongList extends Component {
         const { fomatData } = this.state
         const name = fomatData && fomatData[index].name
         this.getplaylistTop(name)
-        this.setState({ active: index })
+        this.setState({ active: index, moreTitle: true })
     }
     changeOptionVal = (e) => {
         const optionValue = e.target.value
@@ -138,6 +142,11 @@ class SongList extends Component {
             const name = cc[0].name
             this.getplaylistTop(name)
         })
+    }
+    loadMore = () => {
+        const { listId, listTotal } = this.state
+        this.getplaylistTop(listId, listTotal)
+        this.setState({ moreTitle: false })
     }
     render() {
         const { fomatData, active, playlistData } = this.state
@@ -194,6 +203,11 @@ class SongList extends Component {
                         })
                     }
                 </ul>
+                <div
+                    style={{ display: this.state.moreTitle ? 'block' : 'none' }}
+                    onClick={this.loadMore}
+                    className="loadMore"
+                >加载更多···</div>
             </div>
         );
     }
