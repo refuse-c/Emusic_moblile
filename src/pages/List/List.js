@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:00:34
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 13:53:04
+ * @LastEditors  : refuse_c
+ * @LastEditTime : 2019-12-24 17:07:16
  * @Description: 
  */
 import React, { Component } from 'react'
@@ -119,7 +119,7 @@ class List extends Component {
         }
     }
     render() {
-        const { title, titleStatus, opcityState, active , moreData, moreStatue, moreIndex} = this.state
+        const { title, titleStatus, opcityState, active, moreData, moreStatue, moreIndex } = this.state
         const { playerList } = this.props
         return (
             <div className="list-content">
@@ -137,7 +137,7 @@ class List extends Component {
                     <div className="user">
                         <div>
                             <h2>{playerList.name}</h2>
-                            <div className="user-info" style={{ display: isEmpty(playerList.type) ? 'block' : 'none' }}>
+                            <div className="user-info" style={{ display: isEmpty(playerList.type) ? 'flex' : 'none' }}>
                                 <img src={playerList.avatarUrl} alt="" />
                                 <p>{playerList.nickname}</p>
                             </div>
