@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:00:01
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 13:44:00
+ * @LastEditors: RA
+ * @LastEditTime: 2020-02-23 14:28:01
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -79,11 +79,7 @@ class Index extends Component {
                         <div className="info">
                             <p>{playList[0] && playList[index].name}</p>
                             <p>{
-                                playList[0] && playList[index].singer.map((item, index) => {
-                                    return (
-                                        <span key={index}>{'-' + item.name}</span>
-                                    )
-                                })
+                                playList[0] && playList[index].singer.map(item => item.name + '').join('/')
                             }</p>
                         </div>
                     </Link>

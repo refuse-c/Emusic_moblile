@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-15 11:41:20
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-11-27 18:01:01
+ * @LastEditors: RA
+ * @LastEditTime: 2020-02-23 14:20:31
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -95,11 +95,7 @@ class Player extends Component {
                     <div className="title">
                         <p>{playList[0] && playList[index].name}</p>
                         <p>{
-                            playList[0] && playList[index].singer.map((item, index) => {
-                                return (
-                                    <span key={index}>{'-' + item.name}</span>
-                                )
-                            })
+                            playList[0] && playList[index].singer.map(item => item.name + '').join(' / ')
                         }</p>
                     </div>
                     <div className="icon share"></div>
