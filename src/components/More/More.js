@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-12-13 14:23:19
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 18:01:41
+ * @LastEditors: RA
+ * @LastEditTime: 2020-03-03 21:20:43
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -15,6 +15,7 @@ class More extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            assembleUrl: '',
             data: {
                 alName: "讨厌你",
                 dt: 253.064,
@@ -59,9 +60,7 @@ class More extends Component {
     collect = () => {
         console.log('11111')
     }
-    down = () => {
-        console.log('11111')
-    }
+    download = () => { }
     comment = () => {
         console.log('11111')
     }
@@ -81,9 +80,15 @@ class More extends Component {
     del = () => {
         this.props.getStatue(false)//掩藏
     }
-
+    componentDidMount = () => {
+        const { list } = this.props;
+        const singer = list.singer.map(item => item.name + '').join('-')
+        const url = 'http://hw.cc0722.xyz/qq/downloads.php?url=' + list.url + '&name=' + list.name + '--' + singer + '&type=mp3';
+        this.setState({ assembleUrl: url })
+    }
     render() {
         const { list } = this.props;
+        const { assembleUrl } = this.state;
         return (
             <div className="More" onClick={this.del}>
                 <div className="info" onClick={(e) => { e.stopPropagation(); }}>
@@ -113,7 +118,9 @@ class More extends Component {
                             onClick={this.down}
                         >
                             <span className="icon icon-down"></span>
-                            <span>下载</span>
+                            <span >
+                                <a href={assembleUrl} title="">下载</a>
+                            </span>
                         </li>
                         <li
                             onClick={this.comment}

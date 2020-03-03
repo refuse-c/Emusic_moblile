@@ -78,7 +78,6 @@ class recommendSong extends Component {
         this.equal();
     }
     gotoMv = (id, e) => {
-        console.log(id);
         this.props.history.push({ pathname: '/videoDetails' + id });
         e.stopPropagation();
     }

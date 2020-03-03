@@ -45,12 +45,18 @@
 
                 span {
                     height: 100%;
-
                     &:last-child {
                         width: 100%;
                         display: flex;
                         align-items: center;
                         border-bottom: 1px solid #f7f7f7;
+                    }
+                    a{
+                        display: block;
+                        width: 100%;
+                        line-height: 0.4rem;
+                        color: #070707;
+                        text-decoration: none;
                     }
                 }
 

@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:00:01
- * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 16:42:00
+ * @LastEditors: RA
+ * @LastEditTime: 2020-03-03 21:43:36
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -17,6 +17,7 @@ import Find from '../Find/Find'
 import Cloud from '../Cloud/Cloud'
 import Video from '../Video/Video'
 import Icon from '../../components/Icon/Icon'
+// import Setting from '../Setting/Setting'
 // import { Prompt } from 'react-router-dom';
 
 class Index extends Component {
@@ -41,7 +42,7 @@ class Index extends Component {
         }
     }
     clickEven = () => {
-        console.log('dsada')
+        
     }
 
 

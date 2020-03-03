@@ -2,7 +2,7 @@
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:00:01
  * @LastEditors: RA
- * @LastEditTime: 2020-02-23 14:28:01
+ * @LastEditTime: 2020-03-03 21:42:17
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -21,13 +21,18 @@ import TopList from '../../pages/TopList/TopList'
 import Search from '../../pages/Search/Search'
 import Setting from '../../pages/Setting/Setting'
 import Singer from '../../pages/Singer/Singer'
+import More from '../../components/More/More'
 
 
 
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            moreData: {},
+            moreStatue: false,
+            moreIndex: 0,
+        }
     }
     refuse = () => {
         const val = !this.props.playStatus
@@ -52,10 +57,16 @@ class Index extends Component {
     hideList = () => {
         this.refs.playerList.style.display = 'none'
     }
-
+    openMore = (item, index, e) => {
+        this.setState({ moreData: item, moreStatue: true, moreIndex: index })
+        e.stopPropagation();
+    }
+    childStatue = (data) => {
+        this.setState({ moreStatue: data })
+    }
     render() {
-        const { playStatus, playList, index } = this.props
-        // console.log(playList)
+        const { playStatus, playList, index } = this.props;
+        const { moreData, moreIndex, moreStatue } = this.state;
         return (
             <div className="index">
                 <div className="top">
@@ -95,6 +106,7 @@ class Index extends Component {
                         className="player-list"
                         onClick={e => e.stopPropagation()}
                     >
+                        {moreStatue ? <More list={moreData} getStatue={this.childStatue} moreIndex={moreIndex} {...this.props} /> : null}
                         <h3>{FormatNum(index)} / {playList[0] && FormatNum(playList.length - 1)}</h3>
                         <ul className="list">
                             {
@@ -118,7 +130,9 @@ class Index extends Component {
                                             </div>
                                             <div className='right'>
                                                 <div className={Number(item.mvid) === 0 ? '' : 'icon ' + mvClass}></div>
-                                                <div className={'icon ' + moreClass}></div>
+                                                <div
+                                                    onClick={this.openMore.bind(this, item, index)}
+                                                    className={'icon ' + moreClass}></div>
                                             </div>
                                         </li>
                                     )
