@@ -9,12 +9,14 @@
 
  ## download
  
+ 
+ ```
  git clone https://github.com/refuse-c/Emusic_moblile.git
 
  npm install 
  
  npm start
- 
+ ```
  
  ## 免责声明
 
