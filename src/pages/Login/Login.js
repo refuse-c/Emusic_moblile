@@ -2,7 +2,7 @@
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:35:10
  * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-13 14:26:54
+ * @LastEditTime: 2020-08-27 21:07:46
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -16,8 +16,8 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            phone: '13272946536',
-            password: 'wangyi0.0',
+            phone: '',
+            password: '',
             labelT: true,
             labelP: true,
             // userInfo: {}
@@ -34,6 +34,7 @@ class Login extends Component {
             }
 
         }).then(res => {
+            console.log(res)
             const list = {}
             //account
             list.createTime = res.account.createTime
@@ -60,7 +61,7 @@ class Login extends Component {
             list.signature = res.profile.signature
             list.userId = res.profile.userId
             this.props.getUserInfo(list)
-            this.props.history.push('/index/home');
+            this.props.history.push('/index/home/find');
         }).catch(err => {
             console.log(err)
         })
@@ -138,6 +139,7 @@ class Login extends Component {
 //注册store
 const mapStateToProps = (state) => {
     return {
+
         userInfo: state.userInfo//用户信息
 
     }

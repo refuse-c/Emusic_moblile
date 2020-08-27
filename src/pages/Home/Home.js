@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-14 10:00:01
- * @LastEditors: RA
- * @LastEditTime: 2020-03-03 21:43:36
+ * @LastEditors: refuse_c
+ * @LastEditTime: 2020-08-27 21:10:13
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import './Home.scss'
 import * as actions from '../../store/actions'
 import store from '../../store'
-import { Route, NavLink, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, NavLink, Link } from 'react-router-dom';
 
 import Me from '../Me/Me'
 import Find from '../Find/Find'
@@ -42,7 +42,7 @@ class Index extends Component {
         }
     }
     clickEven = () => {
-        
+
     }
 
 
@@ -50,37 +50,31 @@ class Index extends Component {
     render() {
         return (
             <div className="home">
-                {/* <Prompt
-                    // when={formIsHalfFilledOut}
-                    message="你确定要离开当前页面吗？"
-                /> */}
                 <header>
                     <Icon
                         icon='icon-setting'
                         clickEven={this.clickEven}
                     />
-                    {/* <div className="icon icon-setting"></div> */}
                     <ul>
-                        <NavLink to='/index/home/me'><li>我的</li></NavLink >
-                        <NavLink to='/index/home/' exact activeClassName="active"><li>发现</li></NavLink >
-                        <NavLink to='/index/home/cloud'><li>云村</li></NavLink >
-                        <NavLink to='/index/home/vidoe'><li>视频</li></NavLink >
+                        <NavLink key={`me`} to='/index/home/me'><li>我的</li></NavLink >
+                        <NavLink key={`find`} to='/index/home/find' activeClassName="active"><li>发现</li></NavLink >
+                        <NavLink key={`cloud`} to='/index/home/cloud'><li>云村</li></NavLink >
+                        <NavLink key={`vidoe`} to='/index/home/vidoe'><li>视频</li></NavLink >
                     </ul>
                     <Link to='/index/search'>
-                        {/* <div className="icon icon-search"></div> */}
                         <Icon
                             icon='icon-search'
-                        // clickEven={this.clickEven}
                         />
                     </Link>
 
                 </header>
                 <main>
-                    <Route path='/index/home/me' component={Me} />
-                    <Route path='/index/home/' exact component={Find} />
-                    <Route path='/index/home/cloud' component={Cloud} />
-                    <Route path='/index/home/vidoe' component={Video} />
-
+                    <Switch>
+                        <Route path='/index/home/me' component={Me} />
+                        <Route path='/index/home/find' exact component={Find} />
+                        <Route path='/index/home/cloud' component={Cloud} />
+                        <Route path='/index/home/vidoe' component={Video} />
+                    </Switch>
 
                     {/* <Redirect to='/index/home/me' /> */}
                 </main>

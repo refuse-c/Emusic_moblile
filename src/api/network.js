@@ -2,13 +2,13 @@
  * @Author: REFUSE_C
  * @Date: 2019-11-14 09:54:45
  * @LastEditors: refuse_c
- * @LastEditTime: 2019-12-12 09:47:21
+ * @LastEditTime: 2020-08-27 20:21:03
  * @Description: 
  */
 import axios from "axios";
 
 const Axios = axios.create({
-    baseURL: 'http://118.24.118.121:443',
+    baseURL: 'http://164.155.70.80:3000',
     withCredentials: true,
     headers: {
         // "Content-Type": "application/json"

@@ -1,8 +1,8 @@
 /*
  * @Author: REFUSE_C
  * @Date: 2019-11-15 11:41:20
- * @LastEditors: RA
- * @LastEditTime: 2020-02-23 14:20:31
+ * @LastEditors: refuse_c
+ * @LastEditTime: 2020-08-27 20:47:33
  * @Description: 
  */
 import React, { Component } from 'react';
@@ -172,6 +172,7 @@ class Player extends Component {
 
 //注册store
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
         playList: state.playList,//音乐列表
         index: state.index,//index
