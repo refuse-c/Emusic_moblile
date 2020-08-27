@@ -1,8 +1,12 @@
-# react-music
-a react music project
+# Emusic_mobile
 
-git clone https://github.com/refuse-c/react-music.git
+[demo](http:164.155.70.80/mobile)
 
-npm install
 
-npm start
+
+
+ git clone https://github.com/refuse-c/Emusic_moblile.git
+
+ npm install 
+ 
+ npm start
